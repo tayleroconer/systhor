@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SYSTHOR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!--bootstrap-->
+    <link rel="stylesheet" href="inicio.css">   
+    <link rel="stylesheet" href="responsive.css">                                                        <!--enlace css-->
+    <link rel="icon" href="logo.jpg">
+    <script src="script.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head> 
+
+<header>
+  <div class="header-container">
+    <img src="logo.jpg" alt="logo">
+    <h1>SYSTHOR</h1>
+    <p>Servicio de Soporte TI y <br>venta de componentes y perifericos</p>
+  </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="file:///C:/Users/nunuv/Desktop/SYSTHOR%20HTML%20Y%20CSS/INICIO/index.html">INICIO</a>
+              <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Bienvenido a SYSTHOR</a></li>
+                
+                <li><a href="#"><i class="fas fa-info-circle"></i> Descubre lo que Ofrecenmos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="file:///C:/Users/nunuv/Desktop/SYSTHOR%20HTML%20Y%20CSS/PRODUCTOS/productos.html">PRODUCTOS</a>
+              <ul>
+                <li><a href="#"><i class="fas fa-keyboard"></i> Perifericos</a></li>
+                <li><a href="#"><i class="fas fa-laptop"></i>Laptops</a></li>
+              </ul>
+            </li>
+
+            <li><a href="file:///C:/Users/nunuv/Desktop/SYSTHOR%20HTML%20Y%20CSS/SOPORTE%20TI/soporte.html">SOPORTE TI</a>
+              <ul>
+                    <li><a href="#"><i class="fas fa-cogs"></i>Asesoramiento Tecnico</a></li>
+                    <li><a href="#"><i class="fas fa-desktop"></i>Intalacion de Programas </a></li>
+                    <li><a href="#"><i class="fas fa-wrench"></i>Mantenimiento Preventivo</a></li>
+                    <li><a href="#"><i class="fa fa-virus-slash"></i>Eliminacion de Virus</a></li>
+                    <li><a href="#"><i class="fas fa-keyboard"></i>Intalacion de Perifericos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="file:///C:/Users/nunuv/Desktop/SYSTHOR%20HTML%20Y%20CSS/CONOCENOS/conocenos.html">CONOCENOS</a>
+              <ul>
+                <li><a href="#"><i class="fas fa-users"></i>Quiénes Somos</a></li>
+                <li><a href="#"><i class="fas fa-bullseye"></i>Mision y Vision</a></li>
+              </ul>
+            </li>
+        </ul>
+    </nav>
+      
+    <div class="col-md-2 text-end icons-section">
+      <ul class="icons">
+        <li><a href="enlace-de-contacto" id="enlace-usuario"><i class="fas fa-user"></i> Usuario</a></li>
+        <li><a href="enlace-de-idioma" id="enlace-idioma"><i class="fas fa-globe"></i> Idioma</a></li>
+        <li><a href="enlace-de-busqueda" id="enlace-busqueda"><i class="fas fa-search"></i> Buscar</a></li>
+        <li><a href="enlace-de-compras" id="enlace-compras"><i class="fas fa-shopping-cart"></i> Compras</a></li>
+      </ul>
+    </div>
+  
+    <!-- Formularios flotantes -->
+    <div class="formulario-flotante" id="formulario-registro">
+      <h2>Inicio de Sesión</h2>
+      <form>
+        <div class="form-group">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo electrónico">
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <button type="button" id="iniciar-sesion" class="btn btn-secondary">Iniciar Sesión</button>
+      </form>
+    </div>
+  
+    <div class="formulario-flotante" id="formulario-busqueda">
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="Buscar">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+    </div>
+  
+    <div class="formulario-flotante" id="formulario-compras">
+      <h2>Mis Compras</h2>
+      <form>
+        <div id="carrito" ondrop="drop(event)" ondragover="allowDrop(event)">
+          Arrastra la imagen del producto
+        </div>
+        <img src="pro10.png" draggable="true" ondragstart="drag(event)" id="producto1" width="100" height="150">
+        <img src="pro13.png" draggable="true" ondragstart="drag(event)" id="producto2" width="100" height="150">
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar al carrito</button>
+      </form>
+    </div>
+  
+    <div class="formulario-flotante" id="formulario-idioma">
+      <h2>Elige un idioma</h2>
+      <form>
+        <div class="form-group">
+          <label for="idioma">Tu idioma preferido:</label>
+          <select class="form-control" id="idioma" name="idioma">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="fr">Francés</option>
+            <option value="pr">Portugues</option>
+            <option value="ru">Ruso</option>
+            <option value="al">Alemán</option>
+            <option value="it">Italiano</option>
+            <!-- Agrega más opciones de idiomas según sea necesario -->
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Cambiar idioma</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</header>
+
+<body>
+
+  <!-- seccion 1-->
+
+  <div class="container">
+   <div class="frase">
+    <h2>Ofrecemos el software más reciente y ¡Soluciones para nuestros clientes!</h2>
+    <img src="contenido/im1.png" alt="fondo de la frase ">
+   </div>   
+  </div>
+<!-- seccion 2 imagenes -->
+
+<section id="soporte-ti">
+
+  <h2>Servicios más solicitados</h2>
+  <div class="imagenes-soporte">
+    <div class="imagen-container">
+      <h3>Soporte TI</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen1.png">
+            <source src="contenido/soport.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
+
+    <div class="imagen-container">
+      <h3>Asesoramiento Técnico</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen2.png">
+            <source src="contenido/herramientas.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="imagen-container">
+      <h3>Mantenimiento Preventivo</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen3.png">
+            <source src="contenido/vid3.mp4" type="video/mp4">
+        </video>
+      </div> 
+    </div>
+
+  </div>
+</section>
+
+<!-- seccion 3 imagenes -->
+<section id="instalacion-ti">
+  <div class="imagenes-soporte">
+    <div class="imagen-container">
+      <h3>Instalacion de programas</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen4.png">
+            <source src="contenido/intal.mp4" type="video/mp4">
+        </video>
+      </div> 
+    </div>
+
+    <div class="imagen-container">
+      <h3>Eliminacion de virus</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen5.png">
+            <source src="contenido/vir.mp4" type="video/mp4">
+        </video>
+      </div> 
+    </div>
+
+    <div class="imagen-container">
+      <h3>Instalacion de perifericos</h3>
+      <div class="video-imag">
+        <video id="video-per"controls poster="contenido/Imagen6.png">
+            <source src="contenido/perife.mp4" type="video/mp4">
+        </video>
+      </div> 
+    </div>
+  </div>
+</section>
+
+     <!-- seccion 4 imagen -->
+  
+   
+     <section id="cotizacion" class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 col-sm-12 imagen-cotizacion">
+          <img src="Atajos de teclado.gif" alt="Imagen Cotización">
+        </div>
+        <div class="col-md-6 col-sm-12 video-container">
+          <video id="video-soport" controls poster="contenido/imaser.png">
+              <source src="contenido/ss.mp4" type="video/mp4">
+          </video>
+        </div>
+           <!-- seccion 4 formulario-->
+        
+        <div class="col-md-12 col-sm-12 formulario-cotizacion">
+          <h3>Contáctenos</h3>
+          <h4>Solicita tu cotización en línea</h4>
+          <form>
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email (@gmail):</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="servicio">Servicio:</label>
+                <input type="text" id="servicio" name="servicio" required>
+            </div>
+            <div class="input-group">
+                <label for="celular">Celular:</label>
+                <input type="text" id="celular" name="celular" required>
+            </div>
+            <label for="detalles">Detalles adicionales:</label>
+            <textarea id="detalles" name="detalles" rows="4"></textarea>
+            <button type="submit">Enviar mensaje <i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+<!-- seccion 4-->
+
+<section id="soporte-ti" class="container">
+  <h2 class="text-center">Noticias de Tecnología</h2>
+  <div class="row">
+    <div class="col-md-4 col-sm-12 imagen-container">
+      <h3>Open AI</h3>
+      <img src="contenido/Imagen8.png" alt="OPEN AI" class="img-fluid">
+      <p>Un sustituto para ChatGPT-4 y otros clics tecnológicos en América<br>
+        OpenAI anunció que ya ChatGPT-4 tiene boleta de reemplazo por otro bot que aún no tiene fecha de lanzamiento</p>
+    </div>
+
+    <div class="col-md-4 col-sm-12 imagen-container">
+      <h3>OPPO</h3>
+      <img src="contenido/imagen9.webp" alt="OPPO" class="img-fluid">
+      <p>OPPO sigue su estrategia de expansión y ya cuenta con tienda virtual en Perú
+        La plataforma cuenta con una interfaz intuitiva y segura, en la que los usuarios pueden navegar por el catálogo de productos, comparar características, etc.</p>
+    </div>
+
+    <div class="col-md-4 col-sm-12 imagen-container">
+      <h3>Ciberataques</h3>
+      <img src="contenido/imagen10.jpg" alt="Ciber ataques" class="img-fluid">
+      <p>Ciberataques en las últimas semanas: ¿una coincidencia en el tiempo?
+        Los ciberataques en España y a nivel mundial, como el caso de Ticketmaster, evidenciaron la creciente amenaza que enfrentan las empresas y usuarios.</p>
+    </div>
+  </div>
+</section>
+
+
+
+</body>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+       <div class="confoo" style="display: flex; align-items: center;">
+          <img src="logo.jpg" alt="logo" style="width: 60px; height: 50px; margin-right: 10px;">
+          <h1>SYSTHOR</h1>
+       </div>
+
+       <div class="footer-links">
+          <h4>Empresa</h4>
+           <ul>
+                <li><a href="#">Acerca de SYSTHOR</a></li>
+                <li><a href="#">Misión y Visión</a></li>
+           </ul>       
+       </div>
+
+       <div class="footer-links">
+        <h4>Servicios</h4>
+         <ul>
+          <li><a href="#">Reparación de Computadoras</a></li>
+          <li><a href="#">Instalación de Periféricos</a></li>
+          <li><a href="#">Mantenimiento Preventivo</a></li>
+          <li><a href="#">Asesoramiento Técnico</a></li>
+         </ul>       
+       </div>
+
+       <div class="footer-links">
+        <h4>Contactenos</h4>
+         <ul>
+          <li><i class="fa fa-phone" style="transform: scaleX(-1);"></i> 920748082</li>
+          <li><i class="far fa-envelope"></i> systhor@gmail.com</li>
+         </ul>
+       </div>
+
+       <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+       </div>
+    </div>
+  </div>
+     <h3>&copy; 2024 SYSTHOR| todos los derechos reservados</h3>
+</footer>
+
+</html>
